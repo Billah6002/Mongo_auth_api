@@ -1,45 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Tests\\MongoAuthApi\\",
+  "WorkspaceRootPath": "D:\\Github\\Mongo_auth_api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\contracts\\userregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\contracts\\userregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
-      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\consumers\\emailconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\contracts\\userregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\contracts\\userregisteredevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\consumers\\emailconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\consumers\\emailconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\tests\\mongoauthapi\\mongoauthapi\\mongoauthapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "AbsoluteMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|d:\\github\\mongo_auth_api\\mongoauthapi\\mongoauthapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{2D943F88-179F-9601-E45F-0EA4C8F7D2CF}|MongoAuthApi\\MongoAuthApi.csproj|solutionrelative:mongoauthapi\\mongoauthapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
   ],
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,11 +62,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Dockerfile",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Dockerfile",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Dockerfile",
               "RelativeDocumentMoniker": "MongoAuthApi\\Dockerfile",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Dockerfile",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Dockerfile",
               "RelativeToolTip": "MongoAuthApi\\Dockerfile",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -74,23 +74,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\appsettings.json",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\appsettings.json",
               "RelativeDocumentMoniker": "MongoAuthApi\\appsettings.json",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\appsettings.json",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\appsettings.json",
               "RelativeToolTip": "MongoAuthApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-12-25T12:01:40.337Z"
+              "WhenOpened": "2025-12-25T12:01:40.337Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "docker-compose.yml",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\docker-compose.yml",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\docker-compose.yml",
               "RelativeDocumentMoniker": "MongoAuthApi\\docker-compose.yml",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\docker-compose.yml",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\docker-compose.yml",
               "RelativeToolTip": "MongoAuthApi\\docker-compose.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwBgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
@@ -98,24 +99,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Controllers\\AuthController.cs",
               "RelativeToolTip": "MongoAuthApi\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-25T04:50:33.599Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-25T04:50:33.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Services\\AuthService.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Services\\AuthService.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Services\\AuthService.cs",
               "RelativeToolTip": "MongoAuthApi\\Services\\AuthService.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAASwCsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,11 +123,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Models\\User.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Models\\User.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Models\\User.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Models\\User.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Models\\User.cs",
               "RelativeToolTip": "MongoAuthApi\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -135,11 +135,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Program.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Program.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Program.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Program.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Program.cs",
               "RelativeToolTip": "MongoAuthApi\\Program.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -149,9 +149,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "EmailConsumer.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Consumers\\EmailConsumer.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Consumers\\EmailConsumer.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Consumers\\EmailConsumer.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Consumers\\EmailConsumer.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Consumers\\EmailConsumer.cs",
               "RelativeToolTip": "MongoAuthApi\\Consumers\\EmailConsumer.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAzwBkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -159,11 +159,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserRegisteredEvent.cs",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
               "RelativeDocumentMoniker": "MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
               "RelativeToolTip": "MongoAuthApi\\Contracts\\UserRegisteredEvent.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -173,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "MongoAuthApi.http",
-              "DocumentMoniker": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\MongoAuthApi.http",
+              "DocumentMoniker": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\MongoAuthApi.http",
               "RelativeDocumentMoniker": "MongoAuthApi\\MongoAuthApi.http",
-              "ToolTip": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\MongoAuthApi.http",
+              "ToolTip": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\MongoAuthApi.http",
               "RelativeToolTip": "MongoAuthApi\\MongoAuthApi.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",

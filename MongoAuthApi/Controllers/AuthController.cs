@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -14,15 +15,8 @@ public class AuthController : ControllerBase
     [HttpPost("register")]
     public async Task<IActionResult> Register(UserDto request)
     {
-        try
-        {
-            await _authService.RegisterAsync(request.Username, request.Email, request.Password);
-            return Ok(new { message = "User registered successfully" });
-        }
-        catch (Exception ex)
-        {
-            return BadRequest(new { message = ex.Message });
-        }
+        await _authService.RegisterAsync(request.Username, request.Email, request.Password);
+        return Ok(new { message = "User registered successfully" });
     }
 
     [HttpPost("login")]
@@ -36,5 +30,13 @@ public class AuthController : ControllerBase
 }
 
 // Simple DTOs (Data Transfer Objects)
-public record UserDto(string Username, string Email, string Password);
-public record LoginDto(string Email, string Password);
+public record UserDto(
+    [Required] string Username, 
+    [Required] [EmailAddress] string Email, 
+    [Required] [MinLength(6)] string Password
+);
+
+public record LoginDto(
+    [Required] [EmailAddress] string Email, 
+    [Required] string Password
+);

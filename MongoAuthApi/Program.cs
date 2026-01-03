@@ -2,12 +2,23 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MassTransit;
+using MassTransit;
 using MongoAuthApi.Consumers;
+using MongoAuthApi.Settings;
+using MongoAuthApi.Middleware;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
+
+// Configure Settings
+builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("MongoDB"));
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
+
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddCors(options =>
 {
@@ -23,17 +34,18 @@ builder.Services.AddEndpointsApiExplorer();
 //builder.Services.AddControllers();
 //// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-var rabbitMqHost = builder.Configuration["MassTransit:Host"] ?? "localhost";
+builder.Services.AddOpenApi();
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<EmailConsumer>();
 
     x.UsingRabbitMq((context, cfg) =>
     {
-        // Connect to the Docker container
-        cfg.Host(rabbitMqHost, "/", h => {
-            h.Username("guest");
-            h.Password("guest");
+        var rabbitSettings = context.GetRequiredService<IOptions<RabbitMqSettings>>().Value;
+
+        cfg.Host(rabbitSettings.Host, "/", h => {
+            h.Username(rabbitSettings.Username);
+            h.Password(rabbitSettings.Password);
         });
 
         cfg.ConfigureEndpoints(context);
@@ -58,6 +70,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<ExceptionMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

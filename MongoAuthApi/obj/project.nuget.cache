@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zv7aYJvG/qk=",
+  "dgSpecHash": "OKNG2yCAu90=",
   "success": true,
-  "projectFilePath": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\MongoAuthApi.csproj",
+  "projectFilePath": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\MongoAuthApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\billa\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\billa\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

@@ -784,11 +784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\MongoAuthApi.csproj",
+      "projectUniqueName": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\MongoAuthApi.csproj",
       "projectName": "MongoAuthApi",
-      "projectPath": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\MongoAuthApi.csproj",
+      "projectPath": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\MongoAuthApi.csproj",
       "packagesPath": "C:\\Users\\billa\\.nuget\\packages\\",
-      "outputPath": "D:\\Tests\\MongoAuthApi\\MongoAuthApi\\obj\\",
+      "outputPath": "D:\\Github\\Mongo_auth_api\\MongoAuthApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

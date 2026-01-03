@@ -7,20 +7,21 @@ using System.Security.Claims;
 using System.Text;
 using MassTransit;
 using MongoAuthApi.Contracts;
+using MongoAuthApi.Settings;
 
 public class AuthService
 {
     private readonly IMongoCollection<User> _users;
-    private readonly IConfiguration _config;
+    private readonly JwtSettings _jwtSettings;
     private readonly IPublishEndpoint _publishEndpoint;
 
-    public AuthService(IConfiguration config, IPublishEndpoint publishEndpoint)
+    public AuthService(IOptions<MongoDbSettings> mongoSettings, IOptions<JwtSettings> jwtSettings, IPublishEndpoint publishEndpoint)
     {
-        _config = config;
+        _jwtSettings = jwtSettings.Value;
         _publishEndpoint = publishEndpoint;
-        var mongoClient = new MongoClient(_config["MongoDB:ConnectionURI"]);
-        var mongoDatabase = mongoClient.GetDatabase(_config["MongoDB:DatabaseName"]);
-        _users = mongoDatabase.GetCollection<User>(_config["MongoDB:CollectionName"]);
+        var mongoClient = new MongoClient(mongoSettings.Value.ConnectionURI);
+        var mongoDatabase = mongoClient.GetDatabase(mongoSettings.Value.DatabaseName);
+        _users = mongoDatabase.GetCollection<User>(mongoSettings.Value.CollectionName);
     }
 
     public async Task RegisterAsync(string username, string email, string password)
@@ -55,8 +56,7 @@ public class AuthService
 
     private string GenerateJwtToken(User user)
     {
-        var jwtSettings = _config.GetSection("Jwt");
-        var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]!);
+        var key = Encoding.UTF8.GetBytes(_jwtSettings.Key);
 
         var claims = new[]
         {
@@ -70,8 +70,8 @@ public class AuthService
         {
             Subject = new ClaimsIdentity(claims),
             Expires = DateTime.UtcNow.AddHours(2),
-            Issuer = jwtSettings["Issuer"],
-            Audience = jwtSettings["Audience"],
+            Issuer = _jwtSettings.Issuer,
+            Audience = _jwtSettings.Audience,
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
 

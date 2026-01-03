@@ -1,5 +1,7 @@
 ﻿using MassTransit;
 using MongoAuthApi.Contracts;
+using MongoAuthApi.Settings;
+using Microsoft.Extensions.Options;
 using System.Net;
 using System.Net.Mail;
 
@@ -7,26 +9,25 @@ namespace MongoAuthApi.Consumers
 {
     public class EmailConsumer : IConsumer<UserRegisteredEvent>
     {
-        private readonly IConfiguration _config;
+        private readonly EmailSettings _emailSettings;
         private readonly ILogger<EmailConsumer> _logger;
 
         // Inject Configuration to read appsettings.json
-        public EmailConsumer(IConfiguration config, ILogger<EmailConsumer> logger)
+        public EmailConsumer(IOptions<EmailSettings> emailSettings, ILogger<EmailConsumer> logger)
         {
-            _config = config;
+            _emailSettings = emailSettings.Value;
             _logger = logger;
         }
 
         public async Task Consume(ConsumeContext<UserRegisteredEvent> context)
         {
             var user = context.Message;
-            var settings = _config.GetSection("EmailSettings");
 
             try
             {
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress(settings["SenderEmail"]!),
+                    From = new MailAddress(_emailSettings.SenderEmail),
                     Subject = "Welcome to Our Platform!",
                     Body = $"<h1>Hello {user.Username}!</h1><p>We are excited to have you on board.</p>",
                     IsBodyHtml = true,
@@ -34,9 +35,9 @@ namespace MongoAuthApi.Consumers
                 mailMessage.To.Add(user.Email);
 
                 
-                using var smtpClient = new SmtpClient(settings["SmtpHost"], int.Parse(settings["SmtpPort"]!))
+                using var smtpClient = new SmtpClient(_emailSettings.SmtpHost, _emailSettings.SmtpPort)
                 {
-                    Credentials = new NetworkCredential(settings["SenderEmail"], settings["AppPassword"]),
+                    Credentials = new NetworkCredential(_emailSettings.SenderEmail, _emailSettings.AppPassword),
                     EnableSsl = true,
                 };
 
