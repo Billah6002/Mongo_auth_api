@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
+using MongoAuthApi.Dtos;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -28,15 +29,3 @@ public class AuthController : ControllerBase
         return Ok(new { token });
     }
 }
-
-// Simple DTOs (Data Transfer Objects)
-public record UserDto(
-    [Required] string Username, 
-    [Required] [EmailAddress] string Email, 
-    [Required] [MinLength(6)] string Password
-);
-
-public record LoginDto(
-    [Required] [EmailAddress] string Email, 
-    [Required] string Password
-);

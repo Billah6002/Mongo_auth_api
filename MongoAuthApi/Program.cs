@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MassTransit;
-using MassTransit;
 using MongoAuthApi.Consumers;
 using MongoAuthApi.Settings;
 using MongoAuthApi.Middleware;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +18,20 @@ builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("Mo
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
+
+// Configure MongoDB DI
+builder.Services.AddSingleton<IMongoClient>(sp => 
+{
+    var settings = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+    return new MongoClient(settings.ConnectionURI);
+});
+
+builder.Services.AddScoped<IMongoDatabase>(sp => 
+{
+    var settings = sp.GetRequiredService<IOptions<MongoDbSettings>>().Value;
+    var client = sp.GetRequiredService<IMongoClient>();
+    return client.GetDatabase(settings.DatabaseName);
+});
 
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddCors(options =>
@@ -80,6 +94,7 @@ if (app.Environment.IsDevelopment())
     app.UseHttpsRedirection();
 }
 app.UseCors("MyCorsPolicy");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -15,12 +15,10 @@ public class AuthService
     private readonly JwtSettings _jwtSettings;
     private readonly IPublishEndpoint _publishEndpoint;
 
-    public AuthService(IOptions<MongoDbSettings> mongoSettings, IOptions<JwtSettings> jwtSettings, IPublishEndpoint publishEndpoint)
+    public AuthService(IMongoDatabase mongoDatabase, IOptions<MongoDbSettings> mongoSettings, IOptions<JwtSettings> jwtSettings, IPublishEndpoint publishEndpoint)
     {
         _jwtSettings = jwtSettings.Value;
         _publishEndpoint = publishEndpoint;
-        var mongoClient = new MongoClient(mongoSettings.Value.ConnectionURI);
-        var mongoDatabase = mongoClient.GetDatabase(mongoSettings.Value.DatabaseName);
         _users = mongoDatabase.GetCollection<User>(mongoSettings.Value.CollectionName);
     }
 

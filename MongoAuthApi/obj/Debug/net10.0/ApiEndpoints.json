@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "LoginDto",
+        "Type": "MongoAuthApi.Dtos.LoginDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "UserDto",
+        "Type": "MongoAuthApi.Dtos.UserDto",
         "IsRequired": true
       }
     ],
