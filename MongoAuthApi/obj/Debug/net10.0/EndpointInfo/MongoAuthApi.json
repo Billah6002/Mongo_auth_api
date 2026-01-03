@@ -76,6 +76,18 @@
           }
         }
       }
+    },
+    "/api/Chat/history": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -119,6 +131,9 @@
   "tags": [
     {
       "name": "Auth"
+    },
+    {
+      "name": "Chat"
     }
   ]
 }

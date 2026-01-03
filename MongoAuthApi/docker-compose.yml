@@ -21,5 +21,30 @@ services:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
 
+  # 3. Redis (The SignalR Backplane)
+  redis:
+    image: redis:alpine
+    container_name: auth-redis
+    ports:
+      - "6379:6379"
+
+  # 4. .NET API (The Backend)
+  api:
+    build: .
+    container_name: auth-api
+    ports:
+      - "8080:8080"
+    environment:
+      # Database Connections
+      - MongoDB__ConnectionURI=mongodb://mongo:27017
+      - MassTransit__Host=rabbitmq
+      
+      
+      - ConnectionStrings__Redis=redis:6379,abortConnect=false
+    depends_on:
+      - mongo
+      - rabbitmq
+      - redis
+
 volumes:
   mongo-data:

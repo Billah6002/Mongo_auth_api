@@ -105,3 +105,9 @@ D:\Github\Mongo_auth_api\MongoAuthApi\obj\Debug\net10.0\MongoAuthApi.pdb
 D:\Github\Mongo_auth_api\MongoAuthApi\obj\Debug\net10.0\MongoAuthApi.genruntimeconfig.cache
 D:\Github\Mongo_auth_api\MongoAuthApi\obj\Debug\net10.0\ref\MongoAuthApi.dll
 D:\Github\Mongo_auth_api\MongoAuthApi\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\MessagePack.dll
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\MessagePack.Annotations.dll
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\Microsoft.AspNetCore.SignalR.StackExchangeRedis.dll
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\Microsoft.NET.StringTools.dll
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+D:\Github\Mongo_auth_api\MongoAuthApi\bin\Debug\net10.0\StackExchange.Redis.dll

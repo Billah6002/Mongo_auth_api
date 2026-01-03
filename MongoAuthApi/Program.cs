@@ -1,12 +1,13 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
 using MassTransit;
-using MongoAuthApi.Consumers;
-using MongoAuthApi.Settings;
-using MongoAuthApi.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using MongoAuthApi.Consumers;
+using MongoAuthApi.Hubs;
+using MongoAuthApi.Middleware;
+using MongoAuthApi.Settings;
 using MongoDB.Driver;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,17 @@ builder.Services.Configure<MongoDbSettings>(builder.Configuration.GetSection("Mo
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("Jwt"));
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection("RabbitMq"));
+
+var redisConnection = builder.Configuration.GetConnectionString("Redis");
+if (string.IsNullOrEmpty(redisConnection))
+{
+    redisConnection = "localhost:6379,abortConnect=false";
+}
+
+builder.Services.AddSignalR()
+    .AddStackExchangeRedis(redisConnection, options => {
+        options.Configuration.ChannelPrefix = "MongoAuthChat";
+    });
 
 // Configure MongoDB DI
 builder.Services.AddSingleton<IMongoClient>(sp => 
@@ -38,9 +50,10 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("MyCorsPolicy", builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("http://localhost:4200")            
                .AllowAnyMethod()                     // Allow GET, POST, PUT, DELETE
-               .AllowAnyHeader();                    // Allow Headers like 'Authorization'
+               .AllowAnyHeader()
+               .AllowCredentials();
     });
 });
 builder.Services.AddEndpointsApiExplorer();
@@ -78,6 +91,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
         };
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+
+                // Check if the request is for the Hub
+                var path = context.HttpContext.Request.Path;
+
+                if (!string.IsNullOrEmpty(accessToken) &&
+                    path.StartsWithSegments("/chatHub")) //hub url
+                {
+                   
+                    context.Token = accessToken;
+                }
+                return Task.CompletedTask;
+            }
+        };
     });
 
 
@@ -98,5 +129,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<ChatHub>("/chatHub");
 
 app.Run();
